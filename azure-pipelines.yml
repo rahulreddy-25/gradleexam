@@ -1,0 +1,13 @@
+trigger:
+- master
+
+pool:
+  name: Default
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+- script: gradle build
+  displayName: 'Build with gradle'  
+- script: gradle run
+  displayName: 'Running jar'
